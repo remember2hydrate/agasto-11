@@ -258,3 +258,8 @@ footer .nav-link:hover {
   font-weight: bold;
   text-decoration: underline;
 }
+
+.nav-prod {
+  color: #4b4338;
+  background-color: #f8f5ef ;
+}
