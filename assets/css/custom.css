@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+    background-color: #f8f5ef;
+    color: #4b4338;
+  }
+  
+  #myVideo {
+    position: relative;
+    right: 0;
+    top: 0;
+    min-width: 100%; 
+    /*min-height: 100%;*/
+  }
+  
+  .hero-container {
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    /*width: 100%;*/
+    padding: 20px;
+  }
+  
+  #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  .award-carousel{
+    margin-top: 5em;
+    width:max-content; 
+    animation:scroll-left 60s linear infinite;
+  }
+
+  .award-carousel img {
+    height: 265px;
+    margin-left: 5em;
+  }
+
+  @keyframes scroll-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  .title-row{
+    text-align: center;
+  }
+
+  .row{
+    margin-top: 5em !important;
+  }
+
+
+
+  /* ── Samos Legacy palette ────────────────────── */
+  :root {
+    /* Cream (page backgrounds, surfaces) */
+    --cream-50:  #FAFAF6;   /* page background */
+    --cream-100: #F5F4EE;   /* card / section surface */
+    --cream-200: #EAE8DC;   /* borders, dividers */
+    --cream-300: #D8D5C4;   /* disabled states */
+
+    /* Olive green (brand color) */
+    --olive-50:  #EEF0E8;   /* tint backgrounds */
+    --olive-100: #D4D9C4;   /* hover tints */
+    --olive-200: #B0BA94;   /* muted icons, borders */
+    --olive-300: #8A9A68;   /* secondary text on light */
+    --olive-400: #6B7C4A;   /* PRIMARY — buttons, links */
+    --olive-500: #556338;   /* primary hover */
+    --olive-600: #3F4B28;   /* navbar bg, dark accents */
+    --olive-700: #2A3318;   /* headings on cream */
+
+    /* Tin silver (accents, metadata) */
+    --silver-50:  #F4F4F2;
+    --silver-100: #E0E0DC;
+    --silver-200: #C4C4BE;
+    --silver-400: #8A8A84;
+
+    /* ── Semantic aliases ──────────────────────────────── */
+    --color-primary:        var(--olive-400);
+    --color-primary-hover:  var(--olive-500);
+    --color-primary-dark:   var(--olive-600);
+
+    --color-bg:             var(--cream-50);
+    --color-surface:        var(--cream-100);
+    --color-border:         var(--cream-200);
+
+    --color-text-heading:   var(--olive-700);
+    --color-text-body:      #3D3D35;
+    --color-text-muted:     var(--silver-400);
+
+    /* ── Navbar ────────────────────────────────────────── */
+    --nav-bg:               var(--olive-600);
+    --nav-text:             var(--cream-200);
+    --nav-text-active:      var(--cream-50);
+    --nav-text-hover:       var(--olive-300);
+    --nav-link-underline:   var(--olive-300);
+
+    /* ── Buttons ───────────────────────────────────────── */
+    --btn-primary-bg:       var(--olive-400);
+    --btn-primary-text:     var(--cream-50);
+    --btn-primary-hover:    var(--olive-500);
+
+    --btn-secondary-border: var(--olive-400);
+    --btn-secondary-text:   var(--olive-600);
+    --btn-secondary-hover:  var(--olive-50);
+
+    --btn-dark-bg:          var(--olive-600);
+    --btn-dark-text:        var(--cream-200);
+  }
+
+  #main-nav {
+    background-color: var(--olive-600) !important;
+  }
+  
+  /* Nav links use your cream variables */
+  #main-nav .nav-link {
+    color: var(--nav-text);
+  }
+  
+  #main-nav .nav-link:hover,
+  #main-nav .nav-link:focus {
+    color: var(--nav-text-hover);
+  }
+  
+  #main-nav .nav-link.active {
+    color: var(--nav-text-active);
+  }
+  
+  #main-nav .navbar-brand {
+    color: var(--nav-text-active);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Dropdown menu matches the dark olive */
+  #main-nav .dropdown-menu {
+    background-color: var(--olive-600) !important;
+    border: 0.5px solid var(--olive-500);
+  }
+  
+  #main-nav .dropdown-item {
+    color: var(--nav-text);
+  }
+  
+  #main-nav .dropdown-item:hover {
+    background-color: var(--olive-500) !important;
+    color: var(--cream-50);
+  }
+
+
+.title-row h2 {
+    color: #5d4a2f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.footer-container {
+    background-color: #eee6d8;
+}
+
+footer h5 {
+    color: #5d4a2f;
+    font-weight: 600;
+}
+
+footer .nav-link {
+    color: #6d6a5f !important;
+}
+
+footer .nav-link:hover {
+    color: #8b6b2e !important;
+}
+
+.img-logo{
+  width:70px;
+  height: 70px;
+}
