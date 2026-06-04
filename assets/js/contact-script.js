@@ -1,5 +1,5 @@
 const map = L.map('mini-map', { zoomControl: true, scrollWheelZoom: false })
-.setView([37.7180, 26.8350], 12);
+.setView([37.7152498 , 26.7252042], 12);
 
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
 maxZoom: 19,
@@ -15,7 +15,7 @@ html: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36" viewBox="0
 iconSize: [28, 36], iconAnchor: [14, 36], popupAnchor: [0, -36]
 });
 
-L.marker([37.7180, 26.8350], { icon: oliveIcon })
+L.marker([37.7152498 , 26.7252042], { icon: oliveIcon })
 .addTo(map)
 .bindPopup('<strong>agasto</strong><br>Agia Aikaterini, Koumaika<br>Samos 831 04, Greece')
 .openPopup();
