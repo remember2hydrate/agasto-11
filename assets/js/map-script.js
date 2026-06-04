@@ -57,7 +57,7 @@ const stores = [
   ];
 
   // Initialise map centered on Europe/Mediterranean
-  const map = L.map('map').setView([43, 18], 5);
+  const map = L.map('map').setView([42, 18], 5);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
