@@ -371,3 +371,80 @@ footer .nav-link:hover {
     font-size: .87rem;
   }
   .success-banner.show { display: flex; align-items: center; gap: .5rem; }
+
+  /* awards.html */
+.page-header   { text-align: center; padding-block: 2rem 0; }
+.page-header h1, .section-title {
+  color: var(--olive-700); text-transform: uppercase;
+  letter-spacing: .06em; font-weight: 500;
+}
+.section       { padding-block: 2.5rem; }
+.section-title { text-align: center; font-size: 1.25rem; margin-bottom: 1.5rem; }
+.section-intro { max-width: 60ch; margin: 0 auto 2rem; text-align: center; }
+
+.award-grid, .cert-grid {
+  display: grid; gap: 1.5rem; list-style: none; padding: 0; margin: 0;
+}
+.award-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.cert-grid  { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+              max-width: 720px; margin-inline: auto; }
+
+.award-card, .cert-card {
+  background: var(--cream-100); border: 1px solid var(--cream-200);
+  border-radius: .75rem; padding: 1.5rem 1rem; text-align: center;
+  transition: transform .2s, box-shadow .2s;
+}
+.award-card:hover, .cert-card:hover {
+  transform: translateY(-3px); box-shadow: 0 8px 18px rgba(0,0,0,.1);
+}
+.award-card img { display: block; width: 100%; max-width: 180px; height: auto;
+                  aspect-ratio: 1; object-fit: contain; margin: 0 auto 1rem; }
+.cert-card a    { display: flex; flex-direction: column; gap: .5rem;
+                  color: inherit; text-decoration: none; }
+.cert-card img  { width: 100%; height: auto; border: 1px solid var(--cream-200); }
+.award-card__title { font-size: 1rem; color: var(--olive-700); margin: .5rem 0 .25rem; }
+.award-card__meta, .cert-card__meta { font-size: .85rem; margin: 0; color: #5f5f58; }
+
+.medal { display: inline-block; padding: .15rem .7rem; border-radius: 50rem;
+         font-size: .75rem; font-weight: 600; letter-spacing: .04em; }
+.medal--gold   { background: #f3e4b5; color: #5c4510; }
+.medal--silver { background: var(--silver-100); color: #3b3b37; }
+.medal--star   { background: var(--olive-50);  color: var(--olive-700); }
+
+/* awards.html — timeline */
+.award-img { display: block; width: 100%; height: 110px; object-fit: contain; }
+
+.hl-timeline { display: grid; grid-template-columns: 1fr 2rem 1fr; margin-top: 1.5rem; }
+.hl-timeline .contact-card { background: transparent; border: 0; padding: 0; }
+.hl-timeline .fw-semibold { font-size: .9rem; }
+
+/* mobile: vertical bar in the middle, one step per row */
+.hl-timeline::before { content: ""; grid-column: 2; grid-row: 1 / -1; justify-self: center;
+                       border-left: 2px solid var(--olive-200); }
+.hl-step { display: contents; }
+.hl-step > * { align-self: center; text-align: center; padding: 1rem .5rem; }
+.hl-step:nth-child(1) > * { grid-row: 1; }
+.hl-step:nth-child(2) > * { grid-row: 2; }
+.hl-step:nth-child(3) > * { grid-row: 3; }
+.hl-step:nth-child(4) > * { grid-row: 4; }
+.hl-step > .hl-top    { grid-column: 1; }
+.hl-step > .hl-dot    { grid-column: 2; justify-self: center; padding: 0;
+                        width: 14px; height: 14px; border-radius: 50%; background: var(--olive-400); }
+.hl-step > .hl-bottom { grid-column: 3; }
+.hl-year { color: var(--olive-700); }
+
+/* desktop: horizontal bar, one step per column */
+@media (min-width: 992px) {
+  .hl-timeline { grid-template-columns: repeat(4, 1fr); grid-template-rows: auto 2rem auto; margin-top: 2rem; }
+  .hl-timeline::before { grid-column: 1 / -1; grid-row: 2; align-self: center;
+                         justify-self: stretch; border-left: 0; border-top: 2px solid var(--olive-200); }
+  .award-img { height: 160px; }
+  .hl-timeline .fw-semibold { font-size: 1rem; }
+  .hl-step:nth-child(1) > * { grid-column: 1; }
+  .hl-step:nth-child(2) > * { grid-column: 2; }
+  .hl-step:nth-child(3) > * { grid-column: 3; }
+  .hl-step:nth-child(4) > * { grid-column: 4; }
+  .hl-step > .hl-top    { grid-row: 1; align-self: end;   padding: 0 .75rem 1rem; }
+  .hl-step > .hl-dot    { grid-row: 2; align-self: center; }
+  .hl-step > .hl-bottom { grid-row: 3; align-self: start; padding: 1rem .75rem 0; }
+}
